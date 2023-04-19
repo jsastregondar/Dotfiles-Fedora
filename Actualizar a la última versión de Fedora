@@ -1,0 +1,14 @@
+Fase        	Comando     	Qué hace
+Preparación 	ctrl+alt+f2 	Cambio a la consola de texto
+Preparación 	dnf -y upgrade 	Actualización genérica
+Preparación 	dnf --refresh upgrade 	Fuerza al sistema a sincronizar la ultima versión
+Preparación 	dnf install dnf-plugin-system-upgrade 	Descarga e instala el paquete del actualizador
+— 	— 	—
+Actualización 	dnf system-upgrade download --releasever=34 	Descarga los paquetes de instalación
+Actualización 	dnf system-upgrade reboot 	Reinicio para actualizar
+— 	— 	—
+Postinstalación 	rpm --rebuilddb 	Reconstrucción de la bbdd de RPM
+Postinstalación 	dnf distro-sync --setopt=deltarpm=0 	Sincronización y actualización de paquetes
+Postinstalación 	dnf -y install rpmconf && rpmconf -a 	Reconfiguración de configuraciones, si hace falta
+
+Fuente: https://www.yovirtualizador.com/posts/2021/04/28/
