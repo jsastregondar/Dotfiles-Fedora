@@ -1,0 +1,24 @@
+Comando a ejecutar para la copia:
+
+cp -rav /directoriodeorigen /directoriodestino
+
+Ejemplo:
+
+cp -rav /home/jaume /run/media/jaume/orico500
+
+Para comprobar el tamaño de los directorios se hace con el comando du -h 
+
+
+du -h /carpeta (comprueba el tamaño de ese directorio)
+
+Ejeplo:
+
+du -h /home/jaume/ (comprueba el tamaño de ese directorio - disco interno)
+du -h /run/media/jaume/orico500 (comprueba el tamaño de ese directorio - disco ext)
+
+
+#  Para comparar dos directorios
+# -q mostrar solo diferencias
+# -r de forma recursiva
+
+diff -qr /dir1/ /dir2/
